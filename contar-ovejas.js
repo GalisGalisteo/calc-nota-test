@@ -4,9 +4,27 @@
  * Crea una función que recibe un string con lobos y ovejas, y devuelve el número de ovejas que hay en él
  */
 
-function contarOvejas(ovejas) {}
+// function contarOvejas(ovejas) {
+//     let total = ovejas.match(/O/g);
+//     if (!total) {
+//         return 0;
+//     }
+//     return total.length;
+// }
 
-contarOvejas("O"); // 1 🐑
-contarOvejas("OLLO"); // 2 🐑🐑
-contarOvejas("LOOOL"); // 3 🐑🐑🐑
-contarOvejas("LLL"); // 0
+function contarOvejas(ovejas) {
+    let total = 0;
+    for (let i = 0; i < ovejas.length; i++) {
+        if (ovejas[i] === 'O') {
+            total++;
+        }
+    }
+    return total;
+}
+
+(mainStr.split(",").length - 1)
+
+console.log(contarOvejas("O")); // 1 🐑
+console.log(contarOvejas("OLLO")); // 2 🐑🐑
+console.log(contarOvejas("LOOOL")); // 3 🐑🐑🐑
+console.log(contarOvejas("LLL")); // 0
